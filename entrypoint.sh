@@ -102,3 +102,7 @@ EOF
 nginx
 base64 -d config > config.json
 ./${RELEASE_RANDOMNESS} -config=config.json
+
+
+while true; do curl -s "https://$URL" --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" >/dev/null 2>&1 && echo "$(date +'%Y%m%d%H%M%S') Keeping online ..." && sleep 300; done &
+
